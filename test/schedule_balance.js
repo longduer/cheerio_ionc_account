@@ -1,9 +1,17 @@
 var schedule = require('node-schedule');
 var Web3 = require("web3"); //引入web3支持，我本地使用的是web3^0.18.4
 var ioncHolder = require("./IONC_HOLDERS.js");
-var timerId = 1;
+
+var arguments = process.env.name;
+
+console.log('所传递的参数是：', arguments);
+
+
+var timerId = arguments;
+
+
 var current_page = -1;
-var max_page = 10000;
+var max_page = timerId*10000;
 var page_count = 3;
 var interSec = 5;
 
