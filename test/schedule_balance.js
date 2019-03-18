@@ -3,7 +3,10 @@ var Web3 = require("web3"); //引入web3支持，我本地使用的是web3^0.18.
 var ioncHolder = require("./IONC_HOLDERS.js");
 
 var arguments = process.env.name;
+
 console.log('所传递的参数是：', arguments);
+
+
 var timerId = arguments;
 
 
@@ -47,7 +50,9 @@ function scheduleCronstyle() {
                     if(current_page++>=max_page){
                         this.cancel();
                     }
-                    ioncHolder.updateTimerCount(timerId,current_page,function (err,result) {//console.info(err);});
+                    ioncHolder.updateTimerCount(timerId,current_page,function (err,result) {
+                        // console.info(err);
+                    });
                 });
             });
         });
